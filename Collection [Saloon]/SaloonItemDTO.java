@@ -66,6 +66,36 @@ public class SaloonItemDTO implements Serializable {
 		return "SaloonItemDTO [id=" + id + ", name=" + name + ", price=" + price + ", usage=" + usage + ", isMan="
 				+ isMan + "]";
 	}
+
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SaloonItemDTO other = (SaloonItemDTO) obj;
+		if (id != other.id)
+			return false;
+		if (isMan != other.isMan)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
+			return false;
+		if (usage == null) {
+			if (other.usage != null)
+				return false;
+		} else if (!usage.equals(other.usage))
+			return false;
+		return true;
+	}
 	
 
 }
