@@ -1,0 +1,11 @@
+package com.xworkz.array.app;
+
+public class Number {
+	public static void main(String[] args) {
+	int[] number= {1,2,3,4};
+
+	for(int i=1;i>=4;i++) {
+	System.out.println(number[]);
+}
+}
+}
